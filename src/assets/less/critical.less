@@ -51,6 +51,20 @@
             margin-bottom: (32/16rem);
         }
 
+        .cs-title, .cs-text {
+            mix-blend-mode: difference;
+            color: white; // Default color
+          
+            .dark-bg & {
+              color: white; // Light text on dark backgrounds
+            }
+          
+            .light-bg & {
+              color: black; // Dark text on light backgrounds
+            }
+          }
+          
+
    
         .cs-content-graphic {
             height: 305%;
@@ -121,6 +135,16 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #hero-1836 {
+
+        .cs-title {
+            max-width: 80%;
+        }
+
+        .cs-text {
+            max-width: 80%;
+        }
+
+
         .cs-background {
             &::before {
                 content: none;

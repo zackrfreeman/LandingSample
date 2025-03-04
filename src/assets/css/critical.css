@@ -45,6 +45,19 @@
   #hero-1836 .cs-text {
     margin-bottom: 2rem;
   }
+  #hero-1836 .cs-title,
+  #hero-1836 .cs-text {
+    mix-blend-mode: difference;
+    color: white;
+  }
+  .dark-bg #hero-1836 .cs-title,
+  .dark-bg #hero-1836 .cs-text {
+    color: white;
+  }
+  .light-bg #hero-1836 .cs-title,
+  .light-bg #hero-1836 .cs-text {
+    color: black;
+  }
   #hero-1836 .cs-content-graphic {
     height: 305%;
     max-height: 81.25rem;
@@ -106,6 +119,12 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
+  #hero-1836 .cs-title {
+    max-width: 80%;
+  }
+  #hero-1836 .cs-text {
+    max-width: 80%;
+  }
   #hero-1836 .cs-background::before {
     content: none;
   }

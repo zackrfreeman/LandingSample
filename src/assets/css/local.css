@@ -32,7 +32,8 @@
   }
   #services-1838 .cs-title {
     max-width: 10ch;
-    color: var(--bodyTextColorWhite);
+    color: white;
+    text-shadow: 5px 5px 20px #000000;
   }
   #services-1838 .cs-play {
     /* 80px - 120px */

@@ -96,6 +96,24 @@ eleventyNavigation:
         <img loading="lazy" decoding="async" src="/assets/images/hero.webp" alt="field" width="1920" height="1200" aria-hidden="true">
     </picture>
     <img class="cs-graphic" src="/assets/svgs/splatter1.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+    <script>function updateTextColor() {
+        const bgElement = document.querySelector('.background'); // Change selector based on your structure
+        const textElements = document.querySelectorAll('.cs-title, .cs-text');
+        
+        const bgColor = window.getComputedStyle(bgElement).backgroundColor;
+        const [r, g, b] = bgColor.match(/\d+/g).map(Number);
+        
+        const brightness = (r * 0.299 + g * 0.587 + b * 0.114);
+        
+        const textColor = brightness > 186 ? 'black' : 'white';
+        
+        textElements.forEach(el => el.style.color = textColor);
+    }
+    
+    // Run on page load and when background changes
+    document.addEventListener("DOMContentLoaded", updateTextColor);
+    window.addEventListener("resize", updateTextColor);
+    </script>
 </section>
  
 <!-- ============================================ -->
